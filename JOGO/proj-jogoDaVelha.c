@@ -51,32 +51,35 @@ int comparaJogadas(op_jog, op_maq){
         printf("Tesoura corta papel.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
         return 1;
+    }else if ((op_jog == 1) && (op_maq == 1)){
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        printf("Os dois escolheram pedra.\n");
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        return 3;
+    }else if ((op_jog == 2) && (op_maq == 2)){
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        printf("Os dois escolheram papel.\n");
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        return 3;
+    }else if ((op_jog == 3) && (op_maq == 3)){
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        printf("Os dois escolheram tesoura.\n");
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
+        return 3;
     }
 }
 
 
 int main() {
-    int escolha, op_jog, op_maq, result;
+    int op_jog, op_maq, result;
     while (1){
         menu();
-        op_jog = menu_imprime(escolha);
+        op_jog = escolhaDoJogador();
         op_maq = escolhaDaMaquina();
 
 
         if (op_jog == 4){
             break;
-        }else if ((op_jog == 1) && (op_maq == 1)){
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-            printf("Empate. Os dois escolheram pedra.\n");
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-        }else if ((op_jog == 2) && (op_maq == 2)){
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-            printf("Empate. Os dois escolheram papel.\n");
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-        }else if ((op_jog == 3) && (op_maq == 3)){
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-            printf("Empate. Os dois escolheram tesoura.\n");
-            printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
         }else{
             result = comparaJogadas(op_jog, op_maq);
             if (result == 1){
@@ -86,6 +89,10 @@ int main() {
             }else if (result == 0){
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
                 printf("Vitoria da Maquina\n");
+                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+            } else if (result == 3){
+                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+                printf("Empate entre o jogador e a maquina\n");
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
             }
         }
