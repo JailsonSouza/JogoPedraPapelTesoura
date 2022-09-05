@@ -55,17 +55,17 @@ int comparaJogadas(op_jog, op_maq){
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
         printf("Os dois escolheram pedra.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-        return 3;
+        return 2;
     }else if ((op_jog == 2) && (op_maq == 2)){
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
         printf("Os dois escolheram papel.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-        return 3;
+        return 2;
     }else if ((op_jog == 3) && (op_maq == 3)){
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
         printf("Os dois escolheram tesoura.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n");
-        return 3;
+        return 2;
     }
 }
 
@@ -82,15 +82,15 @@ int main() {
             break;
         }else{
             result = comparaJogadas(op_jog, op_maq);
-            if (result == 1){
-                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
-                printf("Vitoria do Jogador\n");
-                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
-            }else if (result == 0){
+            if (result == 0){
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
                 printf("Vitoria da Maquina\n");
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
-            } else if (result == 3){
+            }else if (result == 1){
+                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+                printf("Vitoria do Jogador\n");
+                printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+            } else if (result == 2){
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
                 printf("Empate entre o jogador e a maquina\n");
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
