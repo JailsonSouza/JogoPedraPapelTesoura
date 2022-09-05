@@ -31,16 +31,16 @@ int comparaJogadas(op_jog, op_maq){
         printf("Papel embrulha a pedra.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
         return 1;
+    } else if ((op_jog == 3) && (op_maq == 1)){
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+        printf("Pedra quebra a tesoura.\n");
+        printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
+        return 0;
     } else if ((op_jog == 1) && (op_maq == 3)){
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
         printf("Pedra quebra a tesoura.\n");
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
         return 1;
-    }else if ((op_jog == 3) && (op_maq == 1)){
-        printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
-        printf("Pedra quebra a tesoura.\n");
-        printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
-        return 0;
     } else if ((op_jog == 2) && (op_maq == 3)){
         printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
         printf("Tesoura corta papel.\n");
