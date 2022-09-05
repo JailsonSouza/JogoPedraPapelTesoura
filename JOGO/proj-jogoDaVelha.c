@@ -76,7 +76,8 @@ int main() {
         menu();
         op_jog = escolhaDoJogador();
         op_maq = escolhaDaMaquina();
-
+        printf("Jogador: %d\n", op_jog);
+        printf("Maquina: %d\n", op_maq);
 
         if (op_jog == 4){
             break;
@@ -96,5 +97,5 @@ int main() {
                 printf("=*=*=*=*=*=*=*=*=*=*=*=*=\n");
             }
         }
-    }
+   }
 }
